@@ -113,7 +113,7 @@ function Register(props) {
     };
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: 'space-between', alignItems: 'center', height: '100vh', width: '100vw', backgroundColor: '#0A6E7C', color: 'white' }}>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: 'space-between', alignItems: 'center', width: '100vw', backgroundColor: '#0A6E7C', color: 'white' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100vw', color: 'white', backgroundColor: '#0A6E7C', padding: "12px", paddingLeft: "26px" }}>
                 <img src={logos} alt="logo" width={"50px"} height={"50px"} />
                 <h2 style={{ color: "white", fontWeight: "bold" }}>CIS Employee Management Portal</h2>
@@ -215,7 +215,8 @@ function Register(props) {
                                 />
                             </FormGroup>
                             {!otpSent && (
-                                <Button type="button" onClick={handleSendOtp}>Send OTP</Button>
+                                <Button type="button" onClick={handleSendOtp} style={{ margin: '10px' }}>Send OTP</Button>
+
                             )}
                             {otpSent && !otpVerified && (
                                 <div>
